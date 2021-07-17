@@ -13,6 +13,7 @@ namespace Identity.Api.Database
         {
             //base.OnModelCreating(builder);
             builder.ApplyConfiguration(new ApplicationUserEntityConfiguration());
+            base.OnModelCreating(builder);//do khong can thay doi ten table nen goi lai base
         }
     }
 }

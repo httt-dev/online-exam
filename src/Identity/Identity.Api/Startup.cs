@@ -57,6 +57,8 @@ namespace Identity.Api
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.Configure<AppSettings>(Configuration);
+
             services.AddIdentityServer(x =>
             {
                 x.IssuerUri = "https://online.com.vn";
